@@ -1,6 +1,5 @@
 import React from 'react';
 import LoginForm from '../../components/loginForm';
-// import './loginPage.scss';
 import { PageWrapper, PageText } from './loginPage.styled';
 
 const LoginPage = () => {
