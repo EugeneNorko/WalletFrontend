@@ -42,11 +42,11 @@ function RegistrationForm() {
     ),
     name: Yup.string('Enter your name')
       .min(1, 'Name sould have at least 1 symbol')
-      .max(12, '12 symbols max for Name'),
+      .max(12, '12 symbols max for Name')
+      .required('Mandatory field!'),
   });
 
   const handleRegister = ({ email, password, passwordConfirm, name }) => {
-    //console.log('values :>> ', { email, password, passwordConfirm, name });
     if (password === passwordConfirm) {
       register({ email, password, name }).then(e => {
         if (e.error) {
@@ -120,17 +120,17 @@ function RegistrationForm() {
                 className="input"
               />
 
-              <div className='passwordWrapper'>
-              <MyTextInput
-                label={<LockIcon width={16} height={21} />}
-                type="password"
-                name="password"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.password}
-                placeholder="Password"
-                className="input"
-              />
+              <div className="passwordWrapper">
+                <MyTextInput
+                  label={<LockIcon width={16} height={21} />}
+                  type="password"
+                  name="password"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.password}
+                  placeholder="Password"
+                  className="input"
+                />
                 <div className={checkingPasswordQuality(values.password)}></div>
               </div>
 
@@ -144,7 +144,6 @@ function RegistrationForm() {
                 placeholder="Confirm Password"
                 className="input"
               />
-              {/* {touched.passwordConfirm && errors.passwordConfirm && <p>On Error</p>} */}
 
               <MyTextInput
                 label={<UserIcon width={18} height={18} />}

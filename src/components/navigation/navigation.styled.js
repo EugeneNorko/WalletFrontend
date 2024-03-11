@@ -6,6 +6,10 @@ export const StyledNavLink = styled(NavLink)`
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   color: var(--primary-text-color);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -21,6 +25,9 @@ export const StyledNavLink = styled(NavLink)`
     width: 38px;
     border-radius: 6px;
     fill: var(--background-icons-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width: 768px) {
       width: 24px;
@@ -38,16 +45,9 @@ export const StyledNavLink = styled(NavLink)`
   }
   &:hover {
     transform: scale(1.05);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     & svg {
       fill: var(--accent-color-blue);
-      // filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
-      // filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
-      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 `;

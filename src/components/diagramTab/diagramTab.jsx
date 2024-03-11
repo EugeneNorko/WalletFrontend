@@ -19,8 +19,8 @@ export function DiagramTab() {
   const [getStatistics, { isSuccess }] = useGetStatisticsMutation();
 
   Notiflix.Notify.merge({
-    timeout: 4000,
-    width: '300 px',
+    timeout: 2000,
+    width: '300px',
     useIcon: true,
     fontSize: '12px',
     distance: '90px',
