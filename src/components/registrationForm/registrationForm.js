@@ -43,7 +43,7 @@ function RegistrationForm() {
     name: Yup.string('Enter your name')
       .min(1, 'Name sould have at least 1 symbol')
       .max(12, '12 symbols max for Name')
-      .required('Mandatory field!'),
+      .required('Mandatory field! No spaces allowed'),
   });
 
   const handleRegister = ({ email, password, passwordConfirm, name }) => {
