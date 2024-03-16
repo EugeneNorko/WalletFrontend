@@ -137,7 +137,6 @@ export const SumAndDateWrapp = styled.div`
 export const SumWrap = styled.div`
   display: flex;
   flex-direction: column;
-  vertical-align: bottom;
   overflow: visible;
   position: relative;
   @media screen and (max-width: 767px) {
@@ -194,9 +193,7 @@ export const SumField = styled(Field)`
   font-size: 18px;
   font-weight: 700;
   line-height: 1.47;
-  // @media screen and (max-width: 767px) {
-  //   margin-bottom: 40px;
-  // }
+
   @media screen and (min-width: 768px) {
     width: 180px;
     text-align: center;
@@ -216,12 +213,11 @@ export const TextAreaWrap = styled.div`
   position: relative;
   width: 100%;
   margin-bottom: 40px;
-`
+`;
 
 export const Textarea = styled.textarea`
   ${InputStyle}
   box-sizing: border-box;
-  //margin-bottom: 40px;
   resize: none;
   font-size: 18px;
   @media screen and (min-width: 768px) {
@@ -233,10 +229,15 @@ export const Error = styled.p`
   color: red;
   font-size: 10px;
   position: absolute;
-  //top: 30px;
-  left: 0px;
-  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -14px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    left: 40%;
+    transform: translateX(-40%);
+  }
 `;
